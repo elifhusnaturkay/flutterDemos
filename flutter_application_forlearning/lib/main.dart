@@ -54,7 +54,7 @@ class MyFirstApp extends StatelessWidget {
                               child: Image.network(
                                   "https://avatars.githubusercontent.com/u/126392200?v=4"),
                             ),
-                            Text("mustafam")
+                            Text("m")
                           ],
                         ),
                       ),

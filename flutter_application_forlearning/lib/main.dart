@@ -1,4 +1,4 @@
-import 'dart:ui';
+//import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
@@ -13,15 +13,15 @@ class MyFirstApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
             primaryColorLight: Color.fromARGB(255, 81, 39, 32),
-            backgroundColor: Color.fromARGB(255, 255, 254, 250)),
+            backgroundColor: Color.fromARGB(255, 201, 205, 215)),
         home: Scaffold(
           appBar: AppBar(
-              backgroundColor: Color.fromARGB(255, 220, 216, 210),
+              backgroundColor: Color.fromARGB(255, 201, 205, 215),
               title: Text('My First App'),
               titleTextStyle: const TextStyle(
                   fontSize: 40, color: Color.fromARGB(255, 131, 36, 67))),
           body: Container(
-            color: Color.fromARGB(255, 173, 178, 192),
+            color: Color.fromARGB(255, 201, 205, 215),
             // ignore: sort_child_properties_last
             child: Padding(
               padding: EdgeInsets.all(12),
@@ -54,7 +54,8 @@ class MyFirstApp extends StatelessWidget {
                               child: Image.network(
                                   "https://avatars.githubusercontent.com/u/126392200?v=4"),
                             ),
-                            Text("m")
+                            Text("Title"),
+                            Text("Description")
                           ],
                         ),
                       ),

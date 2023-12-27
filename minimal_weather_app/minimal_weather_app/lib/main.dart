@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:minimal_weather_app/pages/weather_page.dart';
 
-void main(List<String> args) {}
+void main(List<String> args) {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

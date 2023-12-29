@@ -57,19 +57,21 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
-assets:
-  - assets/animations/
-  - family: Poppins
-    fonts:
-      - asset: assets/Poppins/Poppins-SemiBold.ttf
-      - asset: assets/Poppins/Poppins-Medium.ttf
+  assets:
+    - assets/animations/cloudy.json
+    - assets/animations/rainy.json
+    - assets/animations/sunny.json
+    - assets/animations/firtina.json
+    - assets/animations/snow.json
+    - assets/animations/partly cloud.json
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/Poppins/Poppins-SemiBold.ttf
+        - asset: assets/Poppins/Poppins-Medium.ttf
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

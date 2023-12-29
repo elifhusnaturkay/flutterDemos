@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:minimal_weather_app/models/weather_model.dart';
@@ -36,8 +38,7 @@ class _WeatherPageState extends State<WeatherPage> {
 
   //weather animations
   String getWeatherAnimation(String? mainCondition) {
-    if (mainCondition == null) return 'assets/sunny.json';
-
+    if (mainCondition == null) return 'assets/animations/sunny.json';
     switch (mainCondition.toLowerCase()) {
       case 'clouds':
       case 'mist':
@@ -70,14 +71,14 @@ class _WeatherPageState extends State<WeatherPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 176, 177, 171),
+      backgroundColor: Color.fromARGB(184, 201, 201, 201),
       body: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           //city name
           Text(
             _weather?.cityName ?? "loading city..",
             style: TextStyle(
-              fontSize: 35,
+              fontSize: 37,
               fontFamily: 'Poppins',
               fontWeight: FontWeight.bold,
               color: Color.fromARGB(255, 27, 27, 27),
@@ -85,7 +86,11 @@ class _WeatherPageState extends State<WeatherPage> {
           ),
 
           //animations
-          Lottie.asset(getWeatherAnimation(_weather?.mainCondition)),
+          Container(
+            height: 280,
+            width: 280,
+            child: Lottie.asset(getWeatherAnimation(_weather?.mainCondition)),
+          ),
 
           //temperaturel
           Text('${_weather?.temperature.round()}°C',
@@ -100,7 +105,7 @@ class _WeatherPageState extends State<WeatherPage> {
 
           Text(_weather?.mainCondition ?? "",
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 24,
                 fontFamily: 'Poppins',
                 fontWeight: FontWeight.w400,
                 color: Color.fromARGB(255, 27, 27, 27),
